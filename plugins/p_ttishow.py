@@ -52,11 +52,8 @@ async def save_group(bot, message):
                         await (temp.MELCOW['welcome']).delete()
                     except:
                         pass
-                temp.MELCOW['welcome'] = await message.reply_video(
-                video="https://telegra.ph/file/5c72d1cd02ad848196212.mp4",                                               
-                                                 caption=f'ʜᴇʏ, {u.mention} 👋🏻\n𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝘁𝗼 𝗼𝘂𝗿 g𝗿𝗼𝘂𝗽 {message.chat.title}\n\n𝐘𝐨𝐮 𝐂𝐚𝐧 𝐅𝐢𝐧𝐝 𝐀𝐧𝐲 𝐒𝐞𝐫𝐢𝐞𝐬 𝐀𝐧𝐝 𝐌𝐨𝐯𝐢𝐞𝐬. 𝐅𝐫𝐨𝐦 𝐇𝐞𝐫𝐞. 𝐄𝐧𝐣𝐨𝐲😉.\n\n𝐅𝐨𝐥𝐥𝐨𝐰 𝐆𝐫𝐨𝐮𝐩 𝐑𝐮𝐥𝐞𝐬\n <b𝐌𝐚𝐢𝐧 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 ›› @RolexMoviesOX</code>\n 𝐅𝐨𝐥𝐥𝐨𝐰 𝐆𝐫𝐨𝐮𝐩 𝐑𝐮𝐥𝐞𝐬',
-                                                 reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('➡️𝐆𝐫𝐨𝐮𝐩 𝐑𝐮𝐥𝐞𝐬⬅️', url='https://t.me/friendsgroupandnewmovies/12754') ] ] )
-                )
+                temp.MELCOW['welcome'] = await message.reply(f"<b>Hey , {u.mention}, Welcome to {message.chat.title}</b>")
+
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
 async def leave_a_chat(bot, message):
